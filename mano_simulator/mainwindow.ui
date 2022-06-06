@@ -287,7 +287,7 @@ color: rgb(0, 0, 0);</string>
      <rect>
       <x>272</x>
       <y>110</y>
-      <width>313</width>
+      <width>364</width>
       <height>75</height>
      </rect>
     </property>
@@ -488,7 +488,7 @@ color: rgb(0, 0, 0);</string>
       </widget>
      </item>
      <item>
-      <widget class="QTableWidget" name="tableWidget">
+      <widget class="QTableWidget" name="RAM">
        <property name="styleSheet">
         <string notr="true">background-color: rgb(157, 224, 220);
 color: rgb(0, 0, 0);</string>
@@ -554,7 +554,7 @@ color: rgb(0, 0, 0);</string>
      <x>0</x>
      <y>0</y>
      <width>1013</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
