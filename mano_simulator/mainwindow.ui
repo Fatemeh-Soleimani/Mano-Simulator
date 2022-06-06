@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1013</width>
+    <height>693</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(1, 52, 91);
+font: 75 9pt &quot;MS Shell Dlg 2&quot;;
+font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 207, 67);
+gridline-color: rgb(92, 224, 216);
+border-color: rgb(92, 224, 216);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>241</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(254, 255, 188);</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>40</y>
+      <width>481</width>
+      <height>65</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>SC:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>PC:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_2"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>AR:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_3"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>IR:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_4"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_9">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>DR:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_5"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <item>
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>AC:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_6"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <item>
+          <widget class="QLabel" name="label_7">
+           <property name="text">
+            <string>TR:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_7"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="compile_pbtn">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>340</y>
+      <width>211</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 207, 67);
+
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Compile</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="next_pbtn">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>410</y>
+      <width>211</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(92, 224, 216);
+color: rgb(0, 0, 0);
+font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>next step</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="run_pbtn">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>480</y>
+      <width>211</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 207, 67);
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Run</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="reset_pbtn">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>550</y>
+      <width>211</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(92, 224, 216);
+color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Reset</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_21">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>55</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>code:</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>190</y>
+      <width>281</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_23">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_20">
+       <item>
+        <widget class="QLabel" name="label_16">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(92, 224, 216);</string>
+         </property>
+         <property name="text">
+          <string>OUTR:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_16"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_21">
+       <item>
+        <widget class="QLabel" name="label_15">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(92, 224, 216);</string>
+         </property>
+         <property name="text">
+          <string>INPR:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_15"/>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>272</x>
+      <y>110</y>
+      <width>313</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_14">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_10">
+         <item>
+          <widget class="QLabel" name="label_8">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(92, 224, 216);</string>
+           </property>
+           <property name="text">
+            <string>I:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_8"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_11">
+         <item>
+          <widget class="QLabel" name="label_9">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(92, 224, 216);</string>
+           </property>
+           <property name="text">
+            <string>S:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_9"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_12">
+         <item>
+          <widget class="QLabel" name="label_10">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(92, 224, 216);</string>
+           </property>
+           <property name="text">
+            <string>E:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_10"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_13">
+         <item>
+          <widget class="QLabel" name="label_11">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(92, 224, 216);</string>
+           </property>
+           <property name="text">
+            <string>R:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_11"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_15">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_16">
+         <item>
+          <widget class="QLabel" name="label_12">
+           <property name="text">
+            <string>IEN:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_12"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_17">
+         <item>
+          <widget class="QLabel" name="label_13">
+           <property name="text">
+            <string>FGI:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_13"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_18">
+         <item>
+          <widget class="QLabel" name="label_14">
+           <property name="text">
+            <string>FGO:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_14">
+           <property name="styleSheet">
+            <string notr="true">border-color: rgb(92, 224, 216);</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_19"/>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>190</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_22">
+     <item>
+      <widget class="QLabel" name="label_17">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(92, 224, 216);</string>
+       </property>
+       <property name="text">
+        <string>input:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_17"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>120</y>
+      <width>211</width>
+      <height>207</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_5">
+     <item>
+      <widget class="QLabel" name="label_19">
+       <property name="text">
+        <string>Console:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextBrowser" name="textBrowser">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(254, 255, 188);</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>240</y>
+      <width>481</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_6">
+     <item>
+      <widget class="QLabel" name="label_20">
+       <property name="text">
+        <string>RAM:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableWidget" name="tableWidget">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(157, 224, 220);
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <column>
+        <property name="text">
+         <string>Label</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Address</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Instruction</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Hex</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>40</y>
+      <width>211</width>
+      <height>59</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QLabel" name="label_18">
+       <property name="text">
+        <string>Microoperation:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_18">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(254, 255, 188);</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1013</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSave_As"/>
+   </widget>
+   <widget class="QMenu" name="menuAssemble">
+    <property name="title">
+     <string>Assemble</string>
+    </property>
+    <addaction name="actionCompile"/>
+    <addaction name="actionRun"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuAssemble"/>
+  </widget>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset>
+     <normalon>:/icon/icon-bg/new-file.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WindowShortcut</enum>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset>
+     <normalon>:/icon/icon-bg/open.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset>
+     <normalon>:/icon/icon-bg/diskette.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionSave_As">
+   <property name="icon">
+    <iconset>
+     <normalon>:/icon/icon-bg/save.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Save As</string>
+   </property>
+  </action>
+  <action name="actionCompile">
+   <property name="icon">
+    <iconset>
+     <normalon>:/icon/icon-bg/record.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Compile</string>
+   </property>
+  </action>
+  <action name="actionRun">
+   <property name="icon">
+    <iconset>
+     <normalon>:/icon/icon-bg/play-button.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Run</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

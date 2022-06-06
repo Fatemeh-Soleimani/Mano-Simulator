@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>icon-bg/icon1.png</file>
+        <file>icon-bg/blue-bg.jpg</file>
+        <file>icon-bg/rec-blue.png</file>
+        <file>icon-bg/diskette.png</file>
+        <file>icon-bg/new-file.png</file>
+        <file>icon-bg/open.png</file>
+        <file>icon-bg/save.png</file>
+        <file>icon-bg/administration.png</file>
+        <file>icon-bg/record.png</file>
+        <file>icon-bg/circular.png</file>
+        <file>icon-bg/next.png</file>
+        <file>icon-bg/play-button.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>icon-bg/rec-blue.png</file>
+    </qresource>
+</RCC>
