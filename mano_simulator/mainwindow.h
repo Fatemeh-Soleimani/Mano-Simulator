@@ -62,6 +62,9 @@ public:
     void emptyTable();
     void resetRam();
 
+    void printReg();
+    void printTable();
+
 
 private slots:
     void on_actionNew_triggered();
@@ -76,7 +79,7 @@ private slots:
 
     void on_actionRun_triggered();
 
-
+    void on_reset_btn_clicked();
 
 
 private:

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1013</width>
-    <height>693</height>
+    <width>1067</width>
+    <height>673</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,26 +22,27 @@ gridline-color: rgb(92, 224, 216);
 border-color: rgb(92, 224, 216);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTextEdit" name="textEdit">
+   <widget class="QTextEdit" name="code_txtedit">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>30</x>
       <y>40</y>
       <width>241</width>
       <height>571</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(254, 255, 188);</string>
+     <string notr="true">background-color: rgb(254, 255, 188);
+color: rgb(0, 0, 0);</string>
     </property>
    </widget>
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>40</y>
+      <x>300</x>
+      <y>30</y>
       <width>481</width>
-      <height>65</height>
+      <height>81</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -57,7 +58,7 @@ border-color: rgb(92, 224, 216);</string>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit"/>
+          <widget class="QLineEdit" name="SC_lineedit"/>
          </item>
         </layout>
        </item>
@@ -71,7 +72,7 @@ border-color: rgb(92, 224, 216);</string>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_2"/>
+          <widget class="QLineEdit" name="PC_lineedit"/>
          </item>
         </layout>
        </item>
@@ -85,7 +86,7 @@ border-color: rgb(92, 224, 216);</string>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_3"/>
+          <widget class="QLineEdit" name="AR_lineedit"/>
          </item>
         </layout>
        </item>
@@ -99,7 +100,7 @@ border-color: rgb(92, 224, 216);</string>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_4"/>
+          <widget class="QLineEdit" name="IR_lineedit"/>
          </item>
         </layout>
        </item>
@@ -117,7 +118,7 @@ border-color: rgb(92, 224, 216);</string>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_5"/>
+          <widget class="QLineEdit" name="DR_lineedit"/>
          </item>
         </layout>
        </item>
@@ -131,7 +132,7 @@ border-color: rgb(92, 224, 216);</string>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_6"/>
+          <widget class="QLineEdit" name="AC_lineedit"/>
          </item>
         </layout>
        </item>
@@ -145,7 +146,7 @@ border-color: rgb(92, 224, 216);</string>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_7"/>
+          <widget class="QLineEdit" name="TR_lineedit"/>
          </item>
         </layout>
        </item>
@@ -156,7 +157,7 @@ border-color: rgb(92, 224, 216);</string>
    <widget class="QPushButton" name="compile_pbtn">
     <property name="geometry">
      <rect>
-      <x>760</x>
+      <x>820</x>
       <y>340</y>
       <width>211</width>
       <height>61</height>
@@ -174,7 +175,7 @@ color: rgb(0, 0, 0);</string>
    <widget class="QPushButton" name="next_pbtn">
     <property name="geometry">
      <rect>
-      <x>760</x>
+      <x>820</x>
       <y>410</y>
       <width>211</width>
       <height>61</height>
@@ -192,7 +193,7 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
    <widget class="QPushButton" name="run_pbtn">
     <property name="geometry">
      <rect>
-      <x>760</x>
+      <x>820</x>
       <y>480</y>
       <width>211</width>
       <height>61</height>
@@ -209,7 +210,7 @@ color: rgb(0, 0, 0);</string>
    <widget class="QPushButton" name="reset_pbtn">
     <property name="geometry">
      <rect>
-      <x>760</x>
+      <x>820</x>
       <y>550</y>
       <width>211</width>
       <height>61</height>
@@ -226,7 +227,7 @@ color: rgb(0, 0, 0);</string>
    <widget class="QLabel" name="label_21">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>40</x>
       <y>20</y>
       <width>55</width>
       <height>16</height>
@@ -239,7 +240,7 @@ color: rgb(0, 0, 0);</string>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>270</x>
+      <x>310</x>
       <y>190</y>
       <width>281</width>
       <height>33</height>
@@ -259,7 +260,7 @@ color: rgb(0, 0, 0);</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_16"/>
+        <widget class="QLineEdit" name="OUTR_lineedit"/>
        </item>
       </layout>
      </item>
@@ -276,7 +277,7 @@ color: rgb(0, 0, 0);</string>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_15"/>
+        <widget class="QLineEdit" name="INPR_lineedit"/>
        </item>
       </layout>
      </item>
@@ -285,7 +286,7 @@ color: rgb(0, 0, 0);</string>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>272</x>
+      <x>312</x>
       <y>110</y>
       <width>364</width>
       <height>75</height>
@@ -307,7 +308,7 @@ color: rgb(0, 0, 0);</string>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_8"/>
+          <widget class="QLineEdit" name="I_lineedit"/>
          </item>
         </layout>
        </item>
@@ -324,7 +325,7 @@ color: rgb(0, 0, 0);</string>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_9"/>
+          <widget class="QLineEdit" name="S_lineedit"/>
          </item>
         </layout>
        </item>
@@ -341,7 +342,7 @@ color: rgb(0, 0, 0);</string>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_10"/>
+          <widget class="QLineEdit" name="E_lineedit"/>
          </item>
         </layout>
        </item>
@@ -358,7 +359,7 @@ color: rgb(0, 0, 0);</string>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_11"/>
+          <widget class="QLineEdit" name="R_lineedit"/>
          </item>
         </layout>
        </item>
@@ -376,7 +377,7 @@ color: rgb(0, 0, 0);</string>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_12"/>
+          <widget class="QLineEdit" name="IE_lineedit"/>
          </item>
         </layout>
        </item>
@@ -390,7 +391,7 @@ color: rgb(0, 0, 0);</string>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_13"/>
+          <widget class="QLineEdit" name="FGI_lineedit"/>
          </item>
         </layout>
        </item>
@@ -404,7 +405,7 @@ color: rgb(0, 0, 0);</string>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_14">
+          <widget class="QLineEdit" name="FGO_lineedit">
            <property name="styleSheet">
             <string notr="true">border-color: rgb(92, 224, 216);</string>
            </property>
@@ -422,7 +423,7 @@ color: rgb(0, 0, 0);</string>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>600</x>
+      <x>640</x>
       <y>190</y>
       <width>131</width>
       <height>31</height>
@@ -440,14 +441,14 @@ color: rgb(0, 0, 0);</string>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_17"/>
+      <widget class="QLineEdit" name="input_lineedit"/>
      </item>
     </layout>
    </widget>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>760</x>
+      <x>820</x>
       <y>120</y>
       <width>211</width>
       <height>207</height>
@@ -462,9 +463,10 @@ color: rgb(0, 0, 0);</string>
       </widget>
      </item>
      <item>
-      <widget class="QTextBrowser" name="textBrowser">
+      <widget class="QTextBrowser" name="console_txt">
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(254, 255, 188);</string>
+        <string notr="true">background-color: rgb(254, 255, 188);
+color: rgb(0, 0, 0);</string>
        </property>
       </widget>
      </item>
@@ -473,9 +475,9 @@ color: rgb(0, 0, 0);</string>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>260</x>
+      <x>310</x>
       <y>240</y>
-      <width>481</width>
+      <width>471</width>
       <height>371</height>
      </rect>
     </property>
@@ -523,10 +525,10 @@ color: rgb(0, 0, 0);</string>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>760</x>
+      <x>820</x>
       <y>40</y>
       <width>211</width>
-      <height>59</height>
+      <height>61</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -538,9 +540,9 @@ color: rgb(0, 0, 0);</string>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_18">
+      <widget class="QLineEdit" name="ope_line">
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(254, 255, 188);</string>
+        <string notr="true">color: rgb(255, 255, 255);</string>
        </property>
       </widget>
      </item>
@@ -553,8 +555,8 @@ color: rgb(0, 0, 0);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1013</width>
-     <height>21</height>
+     <width>1067</width>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
