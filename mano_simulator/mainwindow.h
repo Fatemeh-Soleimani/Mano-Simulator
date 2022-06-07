@@ -43,7 +43,6 @@ public:
     void setOUTR(const quint8& OUTR);
 
 
-    //edit inr to inc
     void incAR();
     void incPC();
     void incDR();
@@ -58,31 +57,40 @@ public:
 
     void logicUnitAND();
     void logicUnitCMA();
+    void logicUnitCME() { E = ~E; }
+    void arithmeticUnitADD();
+    void arithmeticUnitCIR();
+    void arithmeticUnitCIL();
 
     void emptyTable();
     void resetRam();
-
     void printReg();
     void printTable();
 
+    bool isNumber(const QString& str);
 
-private slots:
-    void on_actionNew_triggered();
 
-    void on_actionOpen_triggered();
+private slots: 
 
-    void on_actionSave_triggered();
-
-    void on_actionSave_As_triggered();
-
-    void on_actionCompile_triggered();
-
-    void on_actionRun_triggered();
-
+    void on_new_btn_clicked();
+    void on_open_btn_clicked();
+    void on_save_btn_clicked();
+    void on_compile_btn_clicked();
     void on_reset_btn_clicked();
+    void on_run_btn_clicked();
+    void on_next_btn_clicked();
+
+
+    void on_actionNew_triggered();
+    void on_actionOpen_triggered();
+    void on_actionSave_triggered(); 
+    void on_actionSave_As_triggered();
+    void on_actionCompile_triggered();
+    void on_actionRun_triggered();
 
 
 private:
+
     Ui::MainWindow *ui;
 
 
