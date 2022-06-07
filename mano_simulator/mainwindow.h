@@ -87,6 +87,10 @@ private slots:
 
     void on_run_pbtn_clicked();
 
+    void on_actionAbout_App_triggered();
+
+    void on_actionAbout_Us_triggered();
+
 private:
 
     Ui::MainWindow *ui;

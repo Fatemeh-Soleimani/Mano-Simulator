@@ -575,8 +575,16 @@ color: rgb(0, 0, 0);</string>
     <addaction name="actionCompile"/>
     <addaction name="actionRun"/>
    </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionAbout_App"/>
+    <addaction name="actionAbout_Us"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuAssemble"/>
+   <addaction name="menuAbout"/>
   </widget>
   <action name="actionNew">
    <property name="icon">
@@ -639,6 +647,26 @@ color: rgb(0, 0, 0);</string>
    </property>
    <property name="text">
     <string>Run</string>
+   </property>
+  </action>
+  <action name="actionAbout_App">
+   <property name="icon">
+    <iconset>
+     <normalon>:/icon/icon-bg/information.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>About App</string>
+   </property>
+  </action>
+  <action name="actionAbout_Us">
+   <property name="icon">
+    <iconset>
+     <normalon>:/icon/icon-bg/user.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>About Us</string>
    </property>
   </action>
  </widget>

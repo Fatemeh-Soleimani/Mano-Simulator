@@ -1634,3 +1634,27 @@ void MainWindow::on_run_pbtn_clicked()
     }
 }
 
+
+void MainWindow::on_actionAbout_App_triggered()
+{
+    QMessageBox aboutapp;
+    aboutapp.setWindowIcon(QIcon(":/icon/icon-bg/information.png"));
+    aboutapp.setWindowTitle("About Mano Simulator");
+    aboutapp.setText("Mano Simulator is a simulator program designed to simulate all the "
+"functions of the computer in Chapters 5 and 6 of Computer System Architecture by M. Morris Mano. It can can"
+" simulate all functions of the Mano Machine including input-output functions and interrupts.\n\nfor using this app at first write your code and "
+"then compile it (you can save your code from menubar buttons) and after compile by press nextstep button you can see the RAM and attributs defind ");
+    aboutapp.exec();
+}
+
+
+void MainWindow::on_actionAbout_Us_triggered()
+{
+    QMessageBox aboutus;
+    aboutus.setWindowIcon(QIcon(":/icon/icon-bg/user.png"));
+    aboutus.setWindowTitle("About Us");
+    aboutus.setText("This App is programmed by Fatemeh Soleimani & Sahar Tavakoli\nthis project is available on github\n"
+"GitHub links:https://github.com/Fatemeh-Soleimani/Mano-Simulator ");
+    aboutus.exec();
+}
+

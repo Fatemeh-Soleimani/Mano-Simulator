@@ -12,6 +12,8 @@
         <file>icon-bg/circular.png</file>
         <file>icon-bg/next.png</file>
         <file>icon-bg/play-button.png</file>
+        <file>icon-bg/information.png</file>
+        <file>icon-bg/user.png</file>
     </qresource>
     <qresource prefix="/">
         <file>icon-bg/rec-blue.png</file>
