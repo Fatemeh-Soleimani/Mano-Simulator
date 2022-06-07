@@ -71,16 +71,6 @@ public:
 
 
 private slots: 
-
-    void on_new_btn_clicked();
-    void on_open_btn_clicked();
-    void on_save_btn_clicked();
-    void on_compile_btn_clicked();
-    void on_reset_btn_clicked();
-    void on_run_btn_clicked();
-    void on_next_btn_clicked();
-
-
     void on_actionNew_triggered();
     void on_actionOpen_triggered();
     void on_actionSave_triggered(); 
@@ -88,6 +78,14 @@ private slots:
     void on_actionCompile_triggered();
     void on_actionRun_triggered();
 
+
+    void on_compile_pbtn_clicked();
+
+    void on_next_pbtn_clicked();
+
+    void on_reset_pbtn_clicked();
+
+    void on_run_pbtn_clicked();
 
 private:
 

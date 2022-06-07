@@ -20,7 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->run_pbtn->setIcon(QIcon(":/icon/icon-bg/play-button.png"));
     ui->next_pbtn->setIcon(QIcon(":/icon/icon-bg/next.png"));
     ui->code_txtedit->setFocus();
-    on_reset_btn_clicked();
+    on_reset_pbtn_clicked();
 
 }
 
@@ -95,48 +95,7 @@ void MainWindow::resetRam()
         ram[i].reset();
     }
 }
-void MainWindow::on_reset_btn_clicked()
-{
-    reseter=1;
-    SC.reset();
-    PC.reset();
-    AR.reset();
-    IR.reset();
-    DR.reset();
-    AC.reset();
-    TR.reset();
-    INPR.reset();
-    OUTR.reset();
-    I.reset();
-    S.reset();
-    E.reset();
-    R.reset();
-    IEN.reset();
-    FGI.reset();
-    FGO.reset();
-    resetRam();
-    printTable();
-    printReg();
-    ui->console_txt->setText("");
-    allDatas.clear();
-    firstallDatas.clear();
-    commands.clear();
-    compiled=0;
-    clk=0;
-    lineStep=0;
-    memorystep=0;
-    run=0;
-    printing=1;
-    ui->run_pbtn->setEnabled(true);
-    ui->next_pbtn->setEnabled(true);
-    ui->input_lineedit->setText("");
-    ui->ope_line->setText("");
-    memoryToLine.clear();
 
-
-
-
-}
 void MainWindow::printReg()
 {
     ui->SC_lineedit->setText(QString::number( SC.to_ulong(), 16 ).toUpper());
@@ -246,9 +205,92 @@ bool MainWindow::isNumber(const QString &str)
        return true;
 }
 
-void MainWindow::on_compile_btn_clicked()
+void MainWindow::on_actionNew_triggered()
 {
-    on_reset_btn_clicked();
+    ui->code_txtedit->clear();
+    issaved="";
+    compiled=0;
+}
+
+
+void MainWindow::on_actionOpen_triggered()
+{
+    QString fileName = QFileDialog::getOpenFileName(this,tr("Open Text file"), "",tr("Myeditor file (*.bxb)"));
+    if (fileName.isEmpty())
+        return;
+    else {
+        ui->code_txtedit->clear();
+        issaved=fileName;
+        ifstream infile;
+        infile.open(fileName.toLocal8Bit());
+        char tmp[300];
+        while(infile.eof()!=true)
+        {
+            //infile>>tmp;
+            infile.getline(tmp,300);
+            ui->code_txtedit->insertPlainText(QString::fromStdString(tmp));
+            ui->code_txtedit->insertPlainText("\n");
+            compiled=0;
+
+        }
+    }
+}
+
+//???
+void MainWindow::on_actionSave_triggered()
+{
+    if(issaved=="")
+    {
+        on_actionSave_As_triggered();
+    }
+    else
+    {
+        ofstream f;
+        f.open(issaved.toLocal8Bit(),ios::out);
+        f<<ui->code_txtedit->toPlainText().toStdString();
+        f.flush();
+        f.close();
+
+    }
+}
+
+
+void MainWindow::on_actionSave_As_triggered()
+{
+
+    QString fileName = QFileDialog::getSaveFileName(this,tr("Save"), "",tr("Mytext editor file (*.bxb)"));
+    if (fileName.isEmpty())
+         return;
+     else {
+
+
+        ofstream f;
+        f.open(fileName.toLocal8Bit(),ios::out);
+        f<<ui->code_txtedit->toPlainText().toStdString();
+        f.flush();
+        f.close();
+
+        issaved=fileName;
+    }
+
+}
+
+
+void MainWindow::on_actionCompile_triggered()
+{
+    on_compile_pbtn_clicked();
+}
+
+
+void MainWindow::on_actionRun_triggered()
+{
+    on_run_pbtn_clicked();
+}
+
+
+void MainWindow::on_compile_pbtn_clicked()
+{
+    on_reset_pbtn_clicked();
     compiled=1;
     int lc=0;
     int lc1=0;
@@ -781,10 +823,10 @@ void MainWindow::on_compile_btn_clicked()
         compiled=0;
     }
 
-
 }
 
-void MainWindow::on_next_btn_clicked()
+
+void MainWindow::on_next_pbtn_clicked()
 {
     if(!run)
     {
@@ -1529,7 +1571,49 @@ void MainWindow::on_next_btn_clicked()
         }
 }
 
-void MainWindow::on_run_btn_clicked()
+
+void MainWindow::on_reset_pbtn_clicked()
+{
+    reseter=1;
+    SC.reset();
+    PC.reset();
+    AR.reset();
+    IR.reset();
+    DR.reset();
+    AC.reset();
+    TR.reset();
+    INPR.reset();
+    OUTR.reset();
+    I.reset();
+    S.reset();
+    E.reset();
+    R.reset();
+    IEN.reset();
+    FGI.reset();
+    FGO.reset();
+    resetRam();
+    printTable();
+    printReg();
+    ui->console_txt->setText("");
+    allDatas.clear();
+    firstallDatas.clear();
+    commands.clear();
+    compiled=0;
+    clk=0;
+    lineStep=0;
+    memorystep=0;
+    run=0;
+    printing=1;
+    ui->run_pbtn->setEnabled(true);
+    ui->next_pbtn->setEnabled(true);
+    ui->input_lineedit->setText("");
+    ui->ope_line->setText("");
+    memoryToLine.clear();
+
+}
+
+
+void MainWindow::on_run_pbtn_clicked()
 {
     if(!compiled)
     {
@@ -1543,113 +1627,10 @@ void MainWindow::on_run_btn_clicked()
         run=1;
         while ((S.to_ulong()))
         {
-            on_next_btn_clicked();
+            on_next_pbtn_clicked();
         }
         printReg();
         printTable();
     }
-}
-
-
-
-void MainWindow::on_new_btn_clicked()
-{
-    on_actionNew_triggered();
-    compiled=0;
-}
-
-
-void MainWindow::on_open_btn_clicked()
-{
-    QString fileName = QFileDialog::getOpenFileName(this,tr("Open Text file"), "",tr("Myeditor file (*.bxb)"));
-    if (fileName.isEmpty())
-        return;
-    else {
-        ui->code_txtedit->clear();
-        issaved=fileName;
-        ifstream infile;
-        infile.open(fileName.toLocal8Bit());
-        char tmp[300];
-        while(infile.eof()!=true)
-        {
-            //infile>>tmp;
-            infile.getline(tmp,300);
-            ui->code_txtedit->insertPlainText(QString::fromStdString(tmp));
-            ui->code_txtedit->insertPlainText("\n");
-            compiled=0;
-
-        }
-    }
-}
-
-void MainWindow::on_save_btn_clicked()
-{
-    if(issaved=="")
-    {
-        on_actionSave_As_triggered();
-    }
-    else
-    {
-        ofstream f;
-        f.open(issaved.toLocal8Bit(),ios::out);
-        f<<ui->code_txtedit->toPlainText().toStdString();
-        f.flush();
-        f.close();
-
-    }
-
-}
-
-void MainWindow::on_actionNew_triggered()
-{
-    ui->code_txtedit->clear();
-    issaved="";
-    compiled=0;
-}
-
-//???open button
-void MainWindow::on_actionOpen_triggered()
-{
-    on_open_btn_clicked();
-    compiled=0;
-}
-
-//???
-void MainWindow::on_actionSave_triggered()
-{
-    on_save_btn_clicked();
-}
-
-
-void MainWindow::on_actionSave_As_triggered()
-{
-
-    QString fileName = QFileDialog::getSaveFileName(this,tr("Save"), "",tr("Mytext editor file (*.bxb)"));
-    if (fileName.isEmpty())
-         return;
-     else {
-
-
-        ofstream f;
-        f.open(fileName.toLocal8Bit(),ios::out);
-        f<<ui->code_txtedit->toPlainText().toStdString();
-        f.flush();
-        f.close();
-
-        issaved=fileName;
-    }
-
-}
-
-//??
-void MainWindow::on_actionCompile_triggered()
-{
-    on_compile_btn_clicked();
-}
-
-//??
-void MainWindow::on_actionRun_triggered()
-{
-    on_run_btn_clicked();
 }
 
