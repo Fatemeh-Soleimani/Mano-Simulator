@@ -337,14 +337,14 @@ void MainWindow::on_compile_pbtn_clicked()
 
 
         memoryToLine[lc1]=i;
-        //qDebug()<<"memory: "<<lc1 <<"  ,,,  " <<"line :"<<i;
+
         lc1++;
 
     }
 
 
 
-    for(int i=0;i<tcommmands; i++, lc++)
+    for(int i=0;i<tcommmands; i++)
     {
         //more than ram's capacity
         if(lc>4096)
@@ -357,13 +357,10 @@ void MainWindow::on_compile_pbtn_clicked()
 
         QStringList riz = commands.at(i).split(' ', Qt::SkipEmptyParts);
 
-        //?? delete if (not neccessary)
             //each words
             if(riz.at(0)=="//" || riz.at(0)[0]=='/')
             {
-                //comment
-                //ui->console->setText("comment in line:"+QString::number(i+1)+"\n");
-                continue;
+                 continue;
             }
             else if(riz.at(0)=="ORG")
             {
@@ -503,7 +500,6 @@ void MainWindow::on_compile_pbtn_clicked()
                 }
 
             }
-
 
 
             else if(riz.at(0)=="ADD")
@@ -790,6 +786,7 @@ void MainWindow::on_compile_pbtn_clicked()
                 ui->RAM->setItem(lc,2,itmintraction);
                 ram[lc]=0x7001;
             }
+
             //assembly
             else if(riz.at(0)=="END")
             {
@@ -813,6 +810,8 @@ void MainWindow::on_compile_pbtn_clicked()
                 compiled=0;
                 break;
             }
+
+            lc++;
 
     }
 
